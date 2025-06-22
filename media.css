@@ -1,0 +1,112 @@
+@media (max-width: 900px) {
+    .section-heading {
+        font-size: 15px;
+    }
+
+    .settings-container {
+        width: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .settings-input-title {
+        font-size: 12px;
+    }
+    .slider-value {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .no-recents-text {
+        font-size: 10px !important;
+    }
+
+    .settings-container {
+        width: 180px;
+    }
+
+    .section-heading {
+        font-size: 13px;
+    }
+
+    .quick-phrases-container .section-heading {
+        font-size: 10px;
+    }
+
+    .quick-phrases {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quick-phrase-text {
+        font-size: 10px;
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    #title {
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .no-recents-text {
+        font-size: 10px;
+    }
+
+    main.main {
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 10px;
+    }
+
+    .recents-container {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        max-height: 320px;
+        align-self: stretch;
+    }
+
+    .type-form-container {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .saved-container {
+        grid-column: 2/3;
+        grid-row: span 2;
+        height: 100% !important;
+        max-height: 700px;
+    }
+
+    .quick-phrases-container {
+        position: absolute;
+        display: none;
+    }
+
+    .settings-container .section-heading {
+        font-size: 22px !important;
+    }
+
+    .settings-container {
+        position: absolute;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .recents-container .section-heading-group {
+        gap: 30px;
+    }
+    .search-form-input {
+        height: 25px !important;
+    }
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title-group">
+                <img id="logo" src="assets/logo.png" alt="type talk logo image">
+                <span id="title">TypeTalk</span>
+            </div>
+            <div class="header-buttons">
+                <button id="dark-mode-button"><i class="fa-solid fa-moon"></i></button>
+                <button id="quick-start-button"><i class="fa-solid fa-bolt"></i><span>Quick Start</span></button>
+                <button id="setup-guide-button"><i class="fa-solid fa-gear"></i><span>Setup Guide</span></button>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="settings-container">
+                <div class="section-heading-group">
+                    <p class="section-heading"><i class="fa-solid fa-microphone-lines"></i><span>Voice Settings</span>
+                    </p>
+                </div>
+                <div class="settings-list">
+                    <div class="voice-form">
+                    </div>
+                    <div class="slider">
+                        <div class="top-row">
+                            <span class="settings-input-title">Pitch</span>
+                            <span class="slider-value" id="pitchVal">1.0</span>
+                        </div>
+                        <div class="input-row">
+                            <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+                        </div>
+                        <p class="bottom-row"><span>Low</span><span>High</span></p>
+                    </div>
+                    <div class="slider">
+                        <div class="top-row">
+                            <span class="settings-input-title">Rate</span>
+                            <span class="slider-value" id="rateVal">1.0</span>
+                        </div>
+                        <div class="input-row">
+                            <input type="range" id="rate" min="0.1" max="10" step="0.1" value="1">
+                        </div>
+                        <p class="bottom-row"><span>Slow</span><span>Fast</span></p>
+                    </div>
+                    <div class="slider">
+                        <div class="top-row">
+                            <span class="settings-input-title">Volume</span>
+                            <span class="slider-value" id="volumeVal">1.0</span>
+                        </div>
+                        <div class="input-row">
+                            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                        </div>
+                        <p class="bottom-row"><span>Quiet</span><span>Loud</span></p>
+                    </div>
+                    <button id="test-voice-button"><i class="fa-solid fa-microphone"></i><span>Test
+                            Voice</span></button>
+                </div>
+            </section>
+            <section class="type-form-container">
+                <div class="section-heading-group">
+                    <p class="section-heading"><i class="fa-brands fa-rocketchat"></i><span>Type To Talk</span></p>
+                    <button id="change-voice-settings" class="">Settings</button>
+                </div>
+                <form class="talk-form section-main">
+                    <textarea required id="talk-input" placeholder="Type What You Want To Say...."></textarea>
+                    <div class="actions">
+                        <button type="submit" id="speak-button"><i
+                                class="fa-solid fa-volume-high"></i><span>Speak</span></button>
+                        <button id="save-button"><i class="fa-solid fa-download"></i><span>Save</span></button>
+                    </div>
+                </form>
+            </section>
+            <section class="recents-container">
+                <div class="section-heading-group">
+                    <p class="section-heading"><i class="fa-solid fa-backward"></i><span>Recents</span></p>
+                    <form class="search-form recent-texts-search-form"><input name="recent-texts-search-input"
+                            class="search-form-input" type="text" id="recent-texts-search-input" placeholder="Search..."></form>
+                </div>
+                <div class="recents section-main"></div>
+            </section>
+            <section class="saved-container">
+                <div class="section-heading-group">
+                    <p class="section-heading"><i class="fa-solid fa-bookmark"></i><span>Saved</span></p>
+                    <form class="search-form saved-texts-search-form"><input name="saved-texts-search-input" type="text"
+                            class="search-form-input" id="saved-texts-search-input" placeholder="Search..."></form>
+                </div>
+                <div class="saved-texts-list section-main">
+                    <!-- <div class="saved-text-wrapper">
+                        <div class="play-wrapper">
+                            <i class="fa-solid fa-circle-play retalk-icon"></i>
+                        </div>
+                        <div class="saved-main-wrapper">
+                            <p class="saved-text">Welcome to TypeTalk, Here you can Talk In calls without speaking.</p>
+                            <div class="menu">     
+                                <i class="fa-solid fa-pen-to-square edit-icon"></i>
+                                <i class="fa-solid fa-trash delete-icon"></i>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            <section class="quick-phrases-container">
+                <div class="section-heading-group">
+                    <p class="section-heading"><i class="fa-solid fa-star"></i><span>Quick Phrases</span></p>
+                </div>
+                <div class="quick-phrases section-main">
+                    <!-- <p class="quick-phrase-text">Hello, How are you?</p>
+                        <p class="quick-phrase-text">Excuse me!</p>
+                        <p class="quick-phrase-text">Thank You</p>
+                        <p class="quick-phrase-text">Need Help!</p>
+                        <p class="quick-phrase-text">Yes</p>
+                        <p class="quick-phrase-text">No</p> -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="popup hide quick-start-popup">
+        <div class="popup-header-group">
+            <span class="popup-header">Quick Start Guide</span>
+            <i class="fa-solid fa-xmark popup-cross"></i>
+        </div>
+        <div class="popup-main">
+            <div class="step-group">
+                <span class="step-number">1</span>
+                <div class="step-group-main">
+                    <p class="step-title">Type Your Message</p>
+                    <p class="step-description">Enter What You Want To Say In Main Text Area.</p>
+                    <img class="step-image" src="assets/textareaimage.png"
+                        alt="image of the main textarea in typetalk to type what you want to say.">
+                </div>
+            </div>
+            <div class="step-group">
+                <span class="step-number">2</span>
+                <div class="step-group-main">
+                    <p class="step-title">Adjust Voice Settings (Optional)</p>
+                    <p class="step-description">Customize the voice, pitch, rate, and volume using the controls on the
+                        left panel.</p>
+                </div>
+            </div>
+            <div class="step-group">
+                <span class="step-number">3</span>
+                <div class="step-group-main">
+                    <p class="step-title">Press Enter or Click "Speak"</p>
+                    <p class="step-description">Press Enter after typing or click the Speak button to have your text
+                        spoken aloud.</p>
+                </div>
+            </div>
+            <div class="step-group">
+                <span class="step-number">4</span>
+                <div class="step-group-main">
+                    <p class="step-title">Save For Later</p>
+                    <p class="step-description">Click the Save button to store phrases you use frequently.</p>
+                </div>
+            </div>
+        </div>
+        <button id="quick-start-popup-button" class="popup-button">Start Using TypeTalk</button>
+    </div>
+
+    <div class="popup hide setup-guide-popup">
+        <div class="popup-header-group">
+            <div class="header-content-group">
+                <span class="popup-header">Set Up TypeTalk in 3 Simple Steps</span>
+                <span class="popup-header-subtitle">And Start Talking In Calls With Your Keyboard</span>
+            </div>
+            <i class="fa-solid fa-xmark popup-cross"></i>
+        </div>
+        <div class="popup-main">
+            <div class="step-group">
+                <span class="step-number">1</span>
+                <div class="step-group-main">
+                    <p class="step-title">Download Safe, Free, and Light, VB-Audio Cable</p>
+                    <p class="step-description">Download and install the free, lightweight software called
+                        <strong>VB-Audio Virtual Cable</strong>. This tool allows your system's generated sound to act
+                        like a microphone input.</p>
+                    <a class="step-link" href="https://vb-audio.com/Cable/" target="_blank" rel="noopener noreferrer">
+                        Get VB-Audio Cable (Official Site)
+                    </a>
+                </div>
+            </div>
+            <div class="step-group">
+                <span class="step-number">2</span>
+                <div class="step-group-main">
+                    <p class="step-title">From Taskbar set Sound Output to 'Cable Input'</p>
+                    <p class="step-description">Go to your <strong>Taskbar</strong> and click the sound icon, then three lines, and set your output
+                        device to <code>CABLE Input (VB-Audio Virtual Cable)</code>.</br></br> This ensures that whatever is
+                        played by your system (TypeTalk voice) will be directed into your mic input</p>
+                </div>
+            </div>
+            <div class="step-group">
+                <span class="step-number">3</span>
+                <div class="step-group-main">
+                    <p class="step-title">Configure Your Call App</p>
+                    <p class="step-description">In your video call or meeting app (Zoom, Google Meet, Discord,
+                        etc.):<br /></br>
+                        - Set your <strong>microphone/input</strong> to
+                        <code>CABLE Output (VB-Audio Virtual Cable)</code><br /></br>
+                        - Set your <strong>speaker/output</strong> to your actual headphones or speakers (e.g., "Realtek
+                        Speakers" or "Headphones")<br /></br>
+                        This lets you hear others while they hear your TypeTalk-generated voice.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="note">
+            <p><strong>After Use You Can Just Switch Your System's Sound Output to your normal, like "Realtek" or "Speakers".</p>
+        </div>
+    </div>
+
+    <div class="backdrop" id="backdrop"></div>
+
+    <div id="screenBlocker">
+        <div class="screen-block-content">
+            This site is made for and works on bigger screens like tablets and laptops
+            <span id="screenBlockIcon"><i class="fa-solid fa-laptop"></i></span>
+        </div>
+    </div>
+
+    <div class="popup test-mode-popup hide">
+        <div class="popup-header-group">
+            <div class="header-content-group">
+                <span class="popup-header">👋 TypeTalk Welcomes You!</span>
+            </div>
+            <!-- <i class="fa-solid fa-xmark popup-cross"></i> -->
+        </div>
+        <div class="popup-main">
+            <p class="test-mode-popup-description">TypeTalk lets you speak with your keyboard in online calls and meetings—quickly, clearly, and confidently.</p>
+            <p class="test-mode-popup-description-warning">⚠️ Note: <br> <br> You're currently exploring Test Mode. To begin using TypeTalk in real meetings, just follow these 3 simple steps—we'll guide you through them in setup-guide section.</p>
+        </div>
+        <div class="buttons-group">
+            <button id="test-popup-setupguide-button" class="popup-button">Show Setup Guide</button>
+            <button id="test-popup-startusing-button" class="popup-button">Use Typetalk</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

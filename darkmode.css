@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+}
+
+main.main {
+    background-color: rgb(45, 45, 45);
+}
+
+main section {
+    color: white;
+    background-color: rgb(18, 18, 18);
+}
+
+.no-recents-text {
+    color: lightgray !important;
+}
+
+.saved-texts-list {
+    background-color: rgb(18, 18, 18);
+}
+
+#talk-input {
+    background-color: rgb(55, 55, 55);
+    color: white;
+}
+
+.quick-phrase-text {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.recents-container {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(155, 155, 155, 0.5)),
+        url('assets/darkmode_background.png');
+    background-size: fill;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.voice-select {
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+form .search-form-input {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border: none !important;
+}
+
+.saved-text-wrapper .menu {
+    color: white;
+}
+
+.popup {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: 2px solid lightgray;
+}
+
+.popup-header {
+    padding-bottom: 3px;
+    border-bottom: 1px solid lightgray;
+}
+
+#change-voice-settings {
+    background-color: rgb(62, 62, 62);
+    color: rgb(224, 224, 224);
+}
+
+.test-mode-popup-description-warning {
+    color: black;
+}
