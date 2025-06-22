@@ -7,7 +7,7 @@ It's simple, it’s honest, and it was built to scratch a personal itch.
 
 I’m an introverted programmer—and talking in random voice channels on Discord or in meetings can be awkward (and, let’s be real, mildly terrifying). So I made this: a way to “talk” without actually... talking. Just type, hit enter, and your message will be spoken out loud into any online call.
 
-But I quickly realized it can help others too 👇
+### [Try TypeTalk Live Webapp](http://typetalk.netlify.app)
 
 ---
 
