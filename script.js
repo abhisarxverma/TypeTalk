@@ -58,16 +58,7 @@ let savedTexts = userData["saved-texts"];
 let quickPhrases = userData["quick-phrases"];
 
 let isMenuVisible = false;
-MENU_BREAKPOINT = 800;
-
-if (window.innerWidth <= MENU_BREAKPOINT) {
-  changeVoiceSettingsButton.style.visibility = "visible";
-  changeVoiceSettingsButton.style.pointerEvents = "auto";
-}
-else {
-  changeVoiceSettingsButton.style.visibility = "hidden";
-  changeVoiceSettingsButton.style.pointerEvents = "none";
-}
+MENU_BREAKPOINT = 900;
 
 checkNoRecent();
 checkNoSaved();
@@ -544,6 +535,14 @@ function handleResize() {
   } else {
     blocker.style.display = "none";
     container.style.display = "block";
+  }
+  if (window.innerWidth <= MENU_BREAKPOINT) {
+    changeVoiceSettingsButton.style.visibility = "visible";
+    changeVoiceSettingsButton.style.pointerEvents = "auto";
+  }
+  else {
+    changeVoiceSettingsButton.style.visibility = "hidden";
+    changeVoiceSettingsButton.style.pointerEvents = "none";
   }
 }
 

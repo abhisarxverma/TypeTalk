@@ -66,10 +66,15 @@ form .search-form-input {
 }
 
 #change-voice-settings {
-    background-color: rgb(62, 62, 62);
+    background-color: rgb(26, 26, 26);
     color: rgb(224, 224, 224);
 }
 
 .test-mode-popup-description-warning {
     color: black;
+}
+
+#github-icon-link {
+    color: white;
+    background-color: black;
 }

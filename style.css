@@ -10,6 +10,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+}
+
 h1, p {
     padding: 0;
     margin: 0;
@@ -20,10 +24,10 @@ button {
 }
 
 .container {
-    min-height: 97.5vh;
+    height: 100vh;
     font-family: var(--font);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 60px 1fr;
 }
 
 .header {
@@ -59,6 +63,7 @@ button {
 
 .header-buttons {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -92,8 +97,8 @@ button {
 
 #dark-mode-button {
     border-radius: 50px;
-    width: 32px;
-    height: 32px;
+    width: 25px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,15 +111,17 @@ button {
 }
 
 main.main {
+    box-sizing: border-box;
     padding: 10px 10px;
     flex: 1;
-    min-height: 100%;
     display: grid;
     grid-template-columns: auto 2fr 1fr;
     grid-template-rows: 1fr 200px;
     gap: 15px;
     /* border: 1px solid black; */
     background-color: whitesmoke;
+    height: 90%;
+    min-height: 0;
 }
 
 main section {
@@ -122,6 +129,7 @@ main section {
     background-color: white;
     border-radius: 8px;
     /* padding: 15px; */
+    min-height: 0;
 }
 
 .section-heading-group {
@@ -185,13 +193,12 @@ form.search-form input:focus {
     grid-column: 2/3;
     grid-row: 1/2;
     overflow: hidden;
-    max-height: 320px;
-    height: 320px;
     padding-bottom: 50px;
     background-image: url(assets/big_light_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    min-height: 0;
 }
 
 .type-form-container {
@@ -209,7 +216,7 @@ form.search-form input:focus {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    max-height:  320px;
+    min-height: 0;
     /* max-width: 100%; */
 }
 
@@ -231,7 +238,7 @@ form.search-form input:focus {
 .quick-phrases-container {
     grid-column: 3/4;
     grid-row: 2/3;
-    /* height: 100%; */
+    height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -635,6 +642,11 @@ input[type="range"]{
     align-self: flex-start;
 }
 
+.setup-guide-popup .note  {
+    font-size: 10px;
+    font-weight: 400 ;
+}
+
 .hide {
     visibility: hidden;
     opacity: 0;
@@ -664,7 +676,7 @@ input[type="range"]{
     width: 70px;
     font-size: 12px;
     margin-right: 5px;
-    border-radius: 12px;
+    border-radius: 7px;
 }
 
 #screenBlocker {
@@ -757,4 +769,20 @@ input[type="range"]{
     width: 100%;
     height: 100%;
     border-radius: 7px;
+}
+
+#github-icon-link {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    font-size: 22px;
+    border-radius: 7px;
+}
+
+#github-icon-link:hover {
+    transform: scale(1.1);
 }
