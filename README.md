@@ -5,9 +5,11 @@
 TypeTalk is a little something I made *while still learning web development* using just **HTML, CSS, and JavaScript**.  
 It's simple, and it was built to scratch a personal itch.
 
-I’m an introverted programmer—and talking in random voice channels on Discord or in meetings can be awkward (and, let’s be real, mildly terrifying). So I made this: Typetalk is nothing more than just a simplified interface to manage talking by typing. You just have to download a simple tool to redirect your system's generated sound to it's own mic, and Typetalk is there for all other configurations like customizing voice, managing recently spoken texts, saving texts. Just magically start talkin in online calls by typing.
+I’m an introverted programmer—and talking in random voice channels on Discord or in meetings can be awkward (and, let’s be real, mildly terrifying). So I made this: Typetalk is nothing more than just a **simplified interface to manage talking by typing**. 
 
-### [Try TypeTalk Live Webapp](http://typetalk.netlify.app)
+You just have to **download a simple tool** to redirect your system's generated sound to it's own mic, and **Typetalk is there for all other configurations like customizing voice, managing recently spoken texts, saving texts**.
+
+### [👉 Try TypeTalk Webapp](http://typetalk.netlify.app)
 
 ---
 
