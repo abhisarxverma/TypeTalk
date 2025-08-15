@@ -3,9 +3,9 @@
 # TypeTalk 
 
 TypeTalk is a little something I made *while still learning web development* using just **HTML, CSS, and JavaScript**.  
-It's simple, it’s honest, and it was built to scratch a personal itch.
+It's simple, and it was built to scratch a personal itch.
 
-I’m an introverted programmer—and talking in random voice channels on Discord or in meetings can be awkward (and, let’s be real, mildly terrifying). So I made this: a way to “talk” without actually... talking. Just type, hit enter, and your message will be spoken out loud into any online call.
+I’m an introverted programmer—and talking in random voice channels on Discord or in meetings can be awkward (and, let’s be real, mildly terrifying). So I made this: Typetalk is nothing more than just a simplified interface to manage talking by typing. You just have to download a simple tool to redirect your system's generated sound to it's own mic, and Typetalk is there for all other configurations like customizing voice, managing recently spoken texts, saving texts. Just magically start talkin in online calls by typing.
 
 ### [Try TypeTalk Live Webapp](http://typetalk.netlify.app)
 
@@ -46,24 +46,15 @@ I’m an introverted programmer—and talking in random voice channels on Discor
 
 ---
 
-## 🚀 What the Future Looks Like
+## 🚀 Later Possibilities
 
-In the future, the goal is to turn this into a **fully functional online calling platform**—where typing your thoughts is just as natural (and powerful) as speaking them.
+- **I can turn the whole webapp to a calling platform but the main source of all talks will be typing, both in voice and video calls**
 
-- **In-app voice-enabled calls**  
-  Join or create calls directly in TypeTalk. Type → Speak → Communicate.  
-  Mic and camera will still be there, but keyboard-powered voice will be the highlight.
+- **Translate incoming speech into another language *in real-time*.**
 
-- **Instant voice translation**  
-  Others in your call might be speaking languages you don’t understand. No problem.  
-  You’ll be able to select your preferred language (like English) and TypeTalk will translate incoming speech into that language *in real-time*.
+- **Type in one language, speak in another**
 
-- **Type in one language, speak in another**  
-  You type in English, and your message gets spoken aloud in Spanish, Hindi, Japanese—whatever language your listener understands.  
-  Smooth, clear, barrier-free conversation.
-
-- **Tailored for every kind of use**  
-  Whether you're in a noisy café, don’t have a mic, struggle with speech, or just love quiet meetings—this won’t just work for you, it’ll be *made* for you.
+----
 
 ## ⚠️ Note from the Developer
 
